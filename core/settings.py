@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     # Contributed apps
-    'django_nose',
+    # 'django_nose',
 
     # Custom apps
     'tasks.apps.TasksConfig',
