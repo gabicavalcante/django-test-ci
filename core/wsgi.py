@@ -1,5 +1,5 @@
 """
-WSGI config for pydjango_ci_integration project.
+WSGI config for core project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pydjango_ci_integration.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
 
 # Uncomment these lines to source an environment file
 # from dotenv import load_dotenv

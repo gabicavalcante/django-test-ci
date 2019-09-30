@@ -35,5 +35,4 @@ jobs:
           xargs pylint -E --load-plugins=pylint_django
     - name: Test 
       run: |
-        python manage.py test tasks.tests.test_models
-        python manage.py test tasks.tests.test_views
+        pytest

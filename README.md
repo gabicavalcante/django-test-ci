@@ -8,17 +8,17 @@ And it's based on this tutorial: https://semaphoreci.com/blog/python-continuous-
 
 1. Use virtualenv for setting up this project
 
-3. Install pip requirements
+2. Install pip requirements
    ```
    pip install -r requirements.txt
    ```
-4. Create new psql database
+3. Create new psql database
    ```
    postgres=# create database pydjango;
    ```
-5. Setup your database credentials and `SITE_URL` in settings.py file available inside ### pydjango_ci_integration folder
+4. Setup your database credentials and `SITE_URL` in settings.py file available inside ### core folder
 
-6. Once you have setup your database, Open command prompt pointing to the Root of the project directory and run following command to create application default database
+5. Once you have setup your database, Open command prompt pointing to the Root of the project directory and run following command to create application default database
 
    ```
    (virtualenv / conda environment) > python manage.py migrate
@@ -26,7 +26,7 @@ And it's based on this tutorial: https://semaphoreci.com/blog/python-continuous-
    (virtualenv / conda environment) > python manage.py createsuperuser
    ```
 
-7. Once all of the above command run sucessfully, We are ready to go. Start server by executing command
+6. Once all of the above command run sucessfully, We are ready to go. Start server by executing command
    ```
    (virtualenv / conda environment) > python manage.py runserver
    ```
@@ -53,4 +53,4 @@ The example pipeline contains 5 blocks:
 - Run Code Analysis
   - Run code analysis / code linting with Pylint
 - Run Unit Tests
-  - Runs Unit Tests with unittest module for views and models file  
+  - Runs Unit Tests with unittest module for views and models file

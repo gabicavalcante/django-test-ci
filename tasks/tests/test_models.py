@@ -1,10 +1,12 @@
 """
     Unit test file for models
 """
+import pytest
 from django.test import TestCase
 
 from tasks.models import Task
 
+pytestmark = pytest.mark.django_db
 
 class TaskModelTest(TestCase):
     """
