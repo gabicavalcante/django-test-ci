@@ -56,19 +56,6 @@ The following environment variables can be set to override defaults:
 
 # CI/CD on Semaphore
 
-Fork this repository and use it to [create a project](https://docs.semaphoreci.com/article/63-your-first-project)
-
-```
-curl https://storage.googleapis.com/sem-cli-releases/get.sh | bash
-sem connect <semaphore-organization-link> <semaphore-id> // found in Semaphore Dashboard
-cd <project directory>
-sem init
-```
-
-The CI pipeline will look like this:
-
-![pipeline](https://github.com/semaphoreci-demos/semaphore-demo-python-django/blob/master/pydjango_ci_integration/pipepline.png)
-
 The example pipeline contains 5 blocks:
 
 - Install Dependencies
