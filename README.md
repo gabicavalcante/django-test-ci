@@ -6,27 +6,17 @@ And it's based on this tutorial: https://semaphoreci.com/blog/python-continuous-
 
 # Local project setup
 
-1. Run following command to install python pre-requisite for mysqlclient python
-
-   ```
-   sudo apt-get install python3-dev default-libmysqlclient-dev ### Ubutnu
-
-   sudo yum install python3-devel mysql-devel ### Redhat / CentOS
-
-   brew install mysql-connector-c ### mac os
-   ```
-
-   for more information on pre-requisite for mysqlclient, visit this page: (https://pypi.org/project/mysqlclient/)
-
-2. Use anaconda / virtualenv for setting up this project
+1. Use virtualenv for setting up this project
 
 3. Install pip requirements
    ```
    pip install -r requirements.txt
    ```
-4. Create new mysql database
-
-5. Setup your database credentials and SITE_URL in settings.py file available inside ### pydjango_ci_integration folder
+4. Create new psql database
+   ```
+   postgres=# create database pydjango;
+   ```
+5. Setup your database credentials and `SITE_URL` in settings.py file available inside ### pydjango_ci_integration folder
 
 6. Once you have setup your database, Open command prompt pointing to the Root of the project directory and run following command to create application default database
 
@@ -63,8 +53,4 @@ The example pipeline contains 5 blocks:
 - Run Code Analysis
   - Run code analysis / code linting with Pylint
 - Run Unit Tests
-  - Runs Unit Tests with unittest module for views and models file
-- Run Browser Tests
-  - Runs browser tests with python selenium webdriver
-- Run Security Tests
-  - Runs security checklist with Django default deployment checklist
+  - Runs Unit Tests with unittest module for views and models file  
