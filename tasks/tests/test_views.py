@@ -27,7 +27,7 @@ class TaskListViewTest(TestCase):
         """
         :return: None
         """
-        response = self.client.get('task/', follow=True)
+        response = self.client.get(reverse('tasks:tasks_view', kwargs={'pk': 1}), follow=True)
         self.assertEqual(response.status_code, 200)
 
     def test_view_url_by_name(self):
