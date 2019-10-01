@@ -13,8 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf.urls import (
+    handler404, handler500
+)
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls import handler404, handler500
 
 from tasks import views
 
@@ -23,5 +27,5 @@ urlpatterns = [
     url('', include('tasks.urls'))
 ]
 
-handler404 = views.Custom404.as_view()
-handler500 = views.Custom500.as_view()
+handler404 = views.page_not_found
+handler500 = views.server_error

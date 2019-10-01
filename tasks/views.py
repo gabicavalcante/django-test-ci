@@ -1,6 +1,10 @@
 """
 Task app: Views file
 """
+from django.shortcuts import (
+    render_to_response
+)
+from django.template import RequestContext
 from django.views.generic import ListView, TemplateView, DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
@@ -65,15 +69,32 @@ class TaskDelete(DeleteView):
     success_url = reverse_lazy('tasks:tasks_list')
 
 
-class Custom404(TemplateView):
-    """
-    Task list Custom 404 View
-    """
-    template_name = 'tasks/404.html'
-
-
 class Custom500(TemplateView):
     """
     Task list Custom 500 View
     """
     template_name = 'tasks/500.html'
+
+
+# HTTP Error 404
+def page_not_found(request, exception):
+    response = render_to_response(
+        'tasks/404.html',
+        context_instance=RequestContext(request)
+    )
+
+    response.status_code = 404
+
+    return response
+
+
+# HTTP Error 500
+def server_error(request):
+    response = render_to_response(
+        'tasks/500.html',
+        context_instance=RequestContext(request)
+    )
+
+    response.status_code = 500
+
+    return response
