@@ -7,7 +7,7 @@ pytest
 pytest-django
 pytest-cov
 # lint
-pylint==2.3.0
+pylint==4.0.9
 pylint-django==2.0.6
 pylint-plugin-utils==0.5 
 # env
